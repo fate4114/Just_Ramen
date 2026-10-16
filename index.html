@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST RAMEN - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+    <div id="orderNotification" style="display: none; background: #c82323; color: #fff; text-align: center; padding: 10px; font-weight: bold; position: fixed; top: 0; width: 100%; z-index: 9999;"></div>
+
+   
+    <header class="navbar">
+        <div class="logo-container">
+    <span class="logo-icon">🍜</span>
+    <div class="logo-text-group">
+        <span class="logo-text">JUST RAMEN</span>
+        <small class="logo-subtext">JAPANESE ULTIMATE SIGNATURE TASTE</small>
+    </div>
+</div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="menu.html">Menu</a>
+        </nav>
+        <div class="nav-icons">
+            <span onclick="toggleTheme()" style="cursor: pointer;" title="Toggle Theme">🌙</span>
+            <span id="cartCount" onclick="openCart()" style="cursor: pointer;">🛒 0</span>
+        </div>
+    </header>
+
+    <main class="main-container">
+       
+        <section class="hero-section-figma">
+            <div class="hero-text-side">
+                <span class="sub-tag">JAPANESE SOUL. EVERYDAY COMFORT.</span>
+                <h1>Authentic Flavor in Every Slurp</h1>
+                <p>Slow-simmered tonkotsu. Springy noodles. Bold, honest flavor. Your favorite Japanese comfort, served one satisfying bowl at a time.</p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn-primary">Explore menu ↗</a>
+                    <a href="#branch" class="btn-secondary">Find a branch ↗</a>
+                </div>
+                <p class="price-note">Real ramen. From ₱190 a bowl.</p>
+            </div>
+            <div class="hero-image-side">
+                <div class="img-wrapper">
+                    <img src="Shiro Original.png" alt="Delicious Tonkotsu Ramen">
+                </div>
+                <div class="img-caption">
+                    <span>The bowl that started it all.</span>
+                    <span>SHIRO / ORIGINAL</span>
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="accent-banner">
+            <span>SLOW-SIMMERED BROTH</span>
+            <span>MADE FRESH, SERVED WITH SOUL</span>
+            <span>JAPANESE ULTIMATE SIGNATURE TASTE</span>
+        </section>
+
+       
+        <section class="art-section">
+            <div class="art-header">
+                <span class="art-sub-tag">THE ART OF A GOOD BOWL</span>
+                <h2>NOTHING EXTRA. JUST THE GOOD STUFF.</h2>
+                <p>Simple ingredients. Patient preparation. Discover what makes our signature bowl yours.</p>
+            </div>
+
+            <div class="art-grid">
+                
+                <div class="recipe-card" id="recipeCard" onmouseover="showDetails()" onmouseout="hideDetails()">
+                    <div class="card-state-header">
+                        <span class="state-label">DEFAULT STATE</span>
+                        <span class="state-icon"></span>
+                    </div>
+                    <div class="recipe-img-box">
+                        <img src="Shiro.png" alt="Shiro Recipe">
+                    </div>
+                    <div class="recipe-content-flex">
+                        <div>
+                            <h3>SHIRO, SIMPLY PERFECT.</h3>
+                            <p>Rich, creamy tonkotsu. A clean finish. The signature taste at the heart of Just Ramen.</p>
+                        </div>
+                        <span class="recipe-badge">OUR ORIGINAL</span>
+                    </div>
+                    <hr class="recipe-divider">
+                    <p id="recipeInfoText" class="recipe-info-prompt">+ Hover over the card to discover the ingredients.</p>
+                </div>
+
+               
+                <div class="recipe-card revealed-card">
+                    <div class="card-state-header">
+                        <span class="state-label-revealed">REVEALED STATE · STATIC PREVIEW</span>
+                        <span class="state-icon"></span>
+                    </div>
+                    <div class="recipe-img-box">
+                        <img src="Shiro1.png" alt="Shiro Recipe Revealed">
+                    </div>
+                    <div class="recipe-content-flex">
+                        <div>
+                            <h3>SHIRO, SIMPLY PERFECT.</h3>
+                            <p>Rich, creamy tonkotsu. A clean finish. The signature taste at the heart of Just Ramen.</p>
+                        </div>
+                        <span class="recipe-badge">OUR ORIGINAL</span>
+                    </div>
+                    <hr class="recipe-divider">
+                    <div class="ingredients-list">
+                        <p class="ingredients-title">WHAT GOES INTO YOUR BOWL</p>
+                        <ul>
+                            <li><span>01</span> Slow-simmered pork broth</li>
+                            <li><span>02</span> Fresh wheat noodles</li>
+                            <li><span>03</span> Tender chashu pork</li>
+                            <li><span>04</span> Ajitsuke tamago</li>
+                            <li><span>05</span> Spring onions</li>
+                            <li><span>06</span> Roasted nori</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="what-just-section">
+            <div class="what-just-header">
+                <span class="what-just-sub">THREE WORDS. ONE PROMISE.</span>
+                <h2>THIS IS WHAT JUST MEANS.</h2>
+                <p>Japanese Ultimate Signature Taste. More than a name — the way we make every bowl.</p>
+            </div>
+
+            <div class="what-just-grid">
+                <div class="what-card">
+                    <div class="what-card-img placeholder-img">
+                        <img src="Authenticity.png" alt="Authenticity">
+                        <span class="card-top-tag">JAPANESE RAMEN CRAFT</span>
+                    </div>
+                    <div class="what-card-body">
+                        <span class="card-num">01</span>
+                        <h3>Authenticity</h3>
+                        <p>Rooted in Japanese ramen traditions, from our patient broth-making to that first perfect slurp.</p>
+                    </div>
+                </div>
+                <div class="what-card">
+                    <div class="what-card-img">
+                        <img src="Quality.png" alt="Quality Ingredients">
+                        <span class="card-top-tag">FRESH INGREDIENTS & PREPARATION</span>
+                    </div>
+                    <div class="what-card-body">
+                        <span class="card-num">02</span>
+                        <h3>Quality</h3>
+                        <p>Carefully chosen ingredients, freshly prepared toppings, and no shortcuts on the things that matter.</p>
+                    </div>
+                </div>
+                <div class="what-card">
+                    <div class="what-card-img">
+                        <img src="Signature Taste.png" alt="Signature Taste">
+                        <span class="card-top-tag">OUR SIGNATURE BOWL</span>
+                    </div>
+                    <div class="what-card-body">
+                        <span class="card-num">03</span>
+                        <h3>Signature Taste</h3>
+                        <p>Creamy tonkotsu, bold black garlic, or a fiery kick. Familiar comfort, with a flavor that is unmistakably JUST.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-bottom-banner">
+                <div class="cta-banner-text">
+                    <h3>YOUR NEXT FAVORITE BOWL IS WAITING.</h3>
+                    <p>Pull up a seat at Just Ramen, or bring the comfort home.</p>
+                </div>
+                <a href="menu.html" class="btn-cta-red">Explore menu ↗</a>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-col-brand">
+                    <div class="logo-container">
+                        <span class="logo-icon">🍜</span>
+                        <div class="footer-logo-text">
+                            <strong>JUST RAMEN</strong>
+                            <small>JAPANESE ULTIMATE SIGNATURE TASTE</small>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Japanese soul. Everyday comfort. A proper bowl of ramen, made for your everyday with slow-simmered broth, fresh noodles, and honest flavor.</p>
+                    <a href="mailto:hello@justramen.ph" class="footer-email">hello@justramen.ph</a>
+                </div>
+                <div class="footer-col">
+                    <h4>EXPLORE</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Our menu</a></li>
+                        <li><a href="#locations">Locations</a></li>
+                        <li><a href="#story">Our story</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>YOUR BOWL, DELIVERED</h4>
+                    <p class="delivery-text">Order your favorite bowl through GrabFood and Foodpanda.</p>
+                    <div class="delivery-buttons">
+                        <a href="#grab" class="btn-delivery">🛵 GrabFood</a>
+                        <a href="#foodpanda" class="btn-delivery">🛵 Foodpanda</a>
+                    </div>
+                </div>
+                <div class="footer-col footer-newsletter">
+                    <h4>STAY IN THE LOOP</h4>
+                    <p class="newsletter-desc">Get updates on new bowls, seasonal specials, and limited-time offers.</p>
+                    <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                        <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p id="newsletterMsg" style="display: none; font-size: 12px; margin-top: 5px;"></p>
+                    <small class="newsletter-note">Just the good stuff. Unsubscribe anytime.</small>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Just Ramen. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#privacy">Privacy policy</a>
+                    <a href="#terms">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
